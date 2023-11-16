@@ -60,6 +60,8 @@ use {
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 }
     use 'lervag/vimtex'
+    use 'mfussenegger/nvim-dap'
+    use 'nvim-tree/nvim-tree.lua'
 
     if packer_bootstrap then
 	require('packer').sync()

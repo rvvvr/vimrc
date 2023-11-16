@@ -6,13 +6,7 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {"rust_analyzer"},
-  handlers = {
-    lsp_zero.default_setup,
-  },
-})
+require('lspconfig').rust_analyzer.setup({})
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
